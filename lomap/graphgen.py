@@ -850,6 +850,8 @@ class GraphGen(object):
         if self.lead_index is not None:
             morph_txt = open(self.dbase.options.name+"_morph.txt", "w")
             morph_data = "morph_pairs = "
+        else:
+            print "The lead index is None, if you think is the lead is specified, please check the format of the lead compound under lomap/ligands"
         info_txt = open(self.dbase.options.name+"_score_with_connection.txt", "w")
         all_key_id = self.dbase.dic_mapping.keys()
         data = ["%-10s,%-10s,%-25s,%-25s,%-15s,%-15s,%-15s,%-10s\n"%("Index_1", "Index_2","Filename_1","Filename_2", "Erc_sim","Str_sim", "Loose_sim", "Connect")]
